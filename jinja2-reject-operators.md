@@ -23,6 +23,17 @@ used_certificates:
 ```
 ['cert2', 'cert3']
 ```
+## compare
+
+### Ansible code
+```
+{{ expired_certificates | reject('>', 'cert2') }}
+```
+### Output
+
+```
+['cert1', 'cert2']
+```
 ## In list
 ### Ansible code
 ```
