@@ -2,7 +2,8 @@
 
 ## Source data
 ```
-[
+{
+  "members": [
     {
         "ip": "1.1.1.1",
         "priority": 10
@@ -15,7 +16,8 @@
         "ip": "1.1.1.3",
         "port": 8080
     }
-]
+  ]
+}
 ```
 
 ## Ansible Command
