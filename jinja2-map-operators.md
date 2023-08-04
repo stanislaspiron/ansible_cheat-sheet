@@ -2,46 +2,45 @@
 
 ## Source data
 ```
-expired_certificates:
-- cert1
-- cert2
-- cert3
-
-used_certificates:
-- cert1
-- cert3
+{
+    "clientssl": [
+        {
+            "caFile": "ca_clients_bundle.crt",
+            "cert": "default.crt",
+            "chain": "ca_bundle.crt",
+            "clientCertCa": "ca_clients_bundle.crt",
+            "name": "clientssl1"
+        },
+        {
+            "caFile": "ca_clients_bundle.crt",
+            "cert": "app1.crt",
+            "chain": "ca_bundle.crt",
+            "clientCertCa": "ca_clients_bundle.crt",
+            "name": "clientssl2"
+        }
+    ]
+}
 ```
 
-## equalto
+## map attribute
 
 ### Ansible code
 ```
-{{ expired_certificates | reject('equalto', 'cert1') }}
+{{ clientssl | map(attribute='name') }}
 ```
 ### Output
 
 ```
-['cert2', 'cert3']
+['clientssl1', 'clientssl2']
 ```
-## compare
+## split and first
 
 ### Ansible code
 ```
-{{ expired_certificates | reject('>', 'cert2') }}
+{{ clientssl | map(attribute='cert') | map('split', '.') | map('first') }}
 ```
 ### Output
 
 ```
-['cert1', 'cert2']
-```
-## In list
-### Ansible code
-```
-{{ expired_certificates | reject('in', used_certificates) }}
-```
-
-### Output
-
-```
-['cert2']
+['default', 'app1']
 ```
