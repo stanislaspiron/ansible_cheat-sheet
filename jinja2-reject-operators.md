@@ -1,4 +1,4 @@
-# reject / select
+# reject / select operators
 
 ## Source data
 ```
