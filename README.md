@@ -7,3 +7,5 @@
 
 ## Jinja2
 - [Add timestamp from date to list of dict](jinja2-date-to-timestamp.md)
+- [reject / select operators](jinja2-reject-operators.md)
+- [others](jinja2-others.md)
