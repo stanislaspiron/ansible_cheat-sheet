@@ -1,4 +1,4 @@
-# Add default value in list of dicts
+# Add timestamp from date to list of dict
 
 ## Source data
 ```
