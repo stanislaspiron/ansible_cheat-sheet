@@ -1,4 +1,4 @@
-# Convert keys values in dict to list
+# Change dict format and key names
 
 ## Source data
 ```
