@@ -1,4 +1,4 @@
-# Add default value in list of dicts
+# Convert list to dict from list index
 
 ## Source data
 ```
