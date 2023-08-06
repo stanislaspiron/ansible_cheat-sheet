@@ -22,7 +22,7 @@ clientssl:
 ## Ansible Command
 
 ```
-{{ clientssl  | json_query('[].{name: name, cert: keyCertChain.cert,chain: keyCertChain.chain  }') | to_nice_yaml }}
+{{ clientssl  | json_query('[].{name: name, cert: keyCertChain[0].cert,chain: keyCertChain[0].chain  }') | to_nice_yaml }}
 ```
 
 ## Output
