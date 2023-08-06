@@ -4,6 +4,7 @@
 
 - [Add default value in list of dicts](json_query_default_value.md)
 - [Convert keys values in dict to list](json_query_keys_to_list.md)
+- [Convert list to dict from list index](json_query_items2dict.md)
 
 ## Jinja2
 - [Add timestamp from date to list of dict](jinja2-date-to-timestamp.md)
