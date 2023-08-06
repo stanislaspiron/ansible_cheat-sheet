@@ -12,4 +12,5 @@
 - [reject / select operators](jinja2-reject-operators.md)
 - [rejectattr / selectattr operators](jinja2-rejectattr-operators.md)
 - [map operators](jinja2-map-operators.md)
+- [combine](jinja2-combine.md)
 - [others](jinja2-others.md)
